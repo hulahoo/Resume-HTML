@@ -1,0 +1,47 @@
+<!-- --------------------- Первая карусель ------------------- -->
+                                    <div class="owl-item active" style="width: 298px;"> <!-- Блока для первой карусели -->
+                                        <div class="skill-area"> <!-- Блок для расположения скиллов -->
+                                            <h4 class="skill-title">Professional</h4> <!-- Надпись для первой карусели -->
+
+                                            <!-- Первый скилл первой карусели -->
+                                            <div class="skillbar clearfix" data-perceent="90%"> <!-- блок для первого скиллбара -->
+                                                <div class="skillbar-title"> <!-- Надпись для первого скиллбара -->
+                                                    <span>CSS</span>
+                                                </div>
+                                                <div class="skillbar-bg"></div> <!-- блок для оставшейся незаполненной части процентной линии -->
+                                                <div class="skillbar-bar to-animate" style="width: 90%;"></div>  <!-- блок для заполненной части процентами -->
+                                                <div class="skill-bar-percent">90%</div> <!-- Надпись в процентах скилла-->
+                                            </div>
+                                            
+                                            <!-- Второй скилл первой карусели -->
+                                            <div class="skillbar clearfix" data-perceent="95%"> <!-- блок для второго скиллбара -->
+                                                <div class="skillbar-title"> <!-- Надпись для второго скиллбара -->
+                                                    <span>HTML</span>
+                                                </div>
+                                                <div class="skillbar-bg"></div> <!-- блок для оставшейся незаполненной части процентной линии -->
+                                                <div class="skillbar-bar to-animate" style="width: 95%;"></div>  <!-- блок для заполненной части процентами -->
+                                                <div class="skill-bar-percent">95%</div> <!-- Надпись в процентах скилла-->
+                                            </div>
+
+                                            <!-- Третий скилл первой карусели -->
+                                            <div class="skillbar clearfix" data-perceent="10%"> <!-- блок для третьего скиллбара -->
+                                                <div class="skillbar-title"> <!-- Надпись для третьего скиллбара -->
+                                                    <span>jQuery</span>
+                                                </div>
+                                                <div class="skillbar-bg"></div> <!-- блок для оставшейся незаполненной части процентной линии -->
+                                                <div class="skillbar-bar to-animate" style="width: 10%;"></div>  <!-- блок для заполненной части процентами -->
+                                                <div class="skill-bar-percent">10%</div> <!-- Надпись в процентах скилла-->
+                                            </div>
+                                            
+                                            <!-- Четвертый скилл первой карусели -->
+                                            <div class="skillbar clearfix" data-perceent="30%"> <!-- блок для третьего скиллбара -->
+                                                <div class="skillbar-title"> <!-- Надпись для четвертого скиллбара -->
+                                                    <span>Bootstrap</span>
+                                                </div>
+                                                <div class="skillbar-bg"></div> <!-- блок для оставшейся незаполненной части процентной линии -->
+                                                <div class="skillbar-bar to-animate" style="width: 30%;"></div>  <!-- блок для заполненной части процентами -->
+                                                <div class="skill-bar-percent">30%</div> <!-- Надпись в процентах скилла-->
+                                            </div>  
+                                                                    
+                                        </div>
+                                    </div>

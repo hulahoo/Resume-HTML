@@ -1,0 +1,1726 @@
+<!-- <!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <link rel="dns-prefetch" href="//s3.envato.com" />
+
+    
+<script nonce="wrp66G/nyAwePeITRH61Bw==">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"NRBR-281af528f2b1e2422b5","applicationID":"13909","transactionName":"NTU0DRQNDwshOmIZBRM3dR8TDg84Nys/FRQYBSoLAxQKAjM=","queueTime":0,"applicationTime":34,"agent":"","atts":"DXgvW1wZQRQtPChSS1QOMhwLByUINi0+BFNaeCgcEAsQDismb0pTEGJiSFYAAFFmNTA="}</script>
+<script nonce="wrp66G/nyAwePeITRH61Bw==">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRBR-281af528f2b1e2422b5",applicationID:"13909"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Classic - Minimal CV/Personal Portfolio Preview - ThemeForest</title>
+    <meta name="description" content="&amp;lt;p&amp;gt;Classic is a minimal html5 template. It can be used as CV/Resume or Personal Portfolio. ...">
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+    <meta name="turbo-visit-control" content="reload">
+
+    <link rel="stylesheet" media="all" href="https://public-assets.envato-static.com/assets/market/core/index-98f684ccef84b460b84ed80460a3ab48f64cc85b09edaca105a51f4020f30c69.css" />
+    <link rel="stylesheet" media="all" href="https://public-assets.envato-static.com/assets/market/pages/preview/index-004d35cdd5d555cdd3e956d1b916825642de06529f0fe91fd9f390813761d2fc.css" />
+    <link rel="stylesheet" media="all" href="https://cookiebot-assets.envato-static.com/cookiebot.css" />
+
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-72x72-precomposed.png" sizes="72x72" />
+  <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-114x114-precomposed.png" sizes="114x114" />
+  <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-144x144-precomposed.png" sizes="144x144" />
+<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="https://public-assets.envato-static.com/icons/themeforest.net/apple-touch-icon-precomposed.png" />
+
+    <script src="https://public-assets.envato-static.com/assets/market/pages/full_screen_preview/index-908950ef3ecdc9c38c400187aa20f0f3aaed760661969ce49e5759af43207ec0.js" nonce="wrp66G/nyAwePeITRH61Bw=="></script>
+
+    <script nonce="wrp66G/nyAwePeITRH61Bw==">
+//<![CDATA[
+      //function to fix height of iframe!
+      var calcHeight = function() {
+        var headerDimensions = $('.preview__header').height();
+        $('.full-screen-preview__frame').height($(window).height() - headerDimensions);
+      }
+
+      $(document).ready(function() {
+        calcHeight();
+      });
+
+      $(window).resize(function() {
+        calcHeight();
+      }).load(function() {
+        calcHeight();
+      });
+
+//]]>
+</script>
+    
+  </head>
+  <body class="full-screen-preview">
+    <div class="preview__header" data-view="ctaHeader" data-item-id="16584012">
+  <div class="preview__envato-logo">
+    <a class="header-envato_market" href="https://themeforest.net/item/classic-minimal-cvpersonal-portfolio/16584012">Envato Market</a>
+  </div>
+
+  <div id="js-preview__actions" class="preview__actions">
+  <div class="preview__action--buy">
+    <a class="header-buy-now e-btn--3d -color-primary" href="https://themeforest.net/checkout/from_item/16584012?license=regular&amp;support=bundle_6month">Buy now</a>
+  </div>
+
+</div>
+</div>
+<iframe class="full-screen-preview__frame" src="http://template.bulkstudio.com/classic" name="preview-frame" frameborder="0" noresize="noresize" data-view="fullScreenPreview" allow="geolocation 'self'; autoplay 'self'">
+</iframe>
+
+
+    <script nonce="wrp66G/nyAwePeITRH61Bw==">
+//<![CDATA[
+      $(function(){viewloader.execute(Views);});
+
+//]]>
+</script>
+    
+<div id="affiliate-tracker" class="is-hidden" data-view="affiliatesTracker" data-cookiebot-enabled="true"></div>
+
+      <script src="https://consent.cookiebot.com/uc.js" data-cbid="4a6af4ea-f614-41d8-b0a9-8bb6d7fe4799" async="async" id="Cookiebot" nonce="wrp66G/nyAwePeITRH61Bw=="></script>
+
+
+  <script nonce="wrp66G/nyAwePeITRH61Bw==">
+//<![CDATA[
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+    var consentCookie = getCookie('CookieConsent');
+
+    if (consentCookie) {
+      var hasConsent = Market.Helpers.CookieConsent.given('statistics');
+
+      if (hasConsent) {
+        setupGoogleAnalytics();
+        loadGoogleAnalytics();
+        loadLinkingForAllAccounts();
+      }
+    } else {
+      setupGoogleAnalytics();
+      loadGoogleAnalytics();
+      loadLinkingForAllAccounts();
+    }
+
+    window.addEventListener('CookiebotOnAccept', function (e) {
+      if (Cookiebot.consent.statistics) {
+        if (!(window.ga && ga.create)) {
+          setupGoogleAnalytics();
+          loadGoogleAnalytics();
+          loadLinkingForAllAccounts();
+        }
+      } else {
+        unloadGoogleAnalytics()
+      }
+      if (!consentToExperimentsEnrollmentGiven()) {
+        unenrollFromExperiments();
+      }
+    }, false);
+
+  function getCookie(name) {
+    var name = name + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var cookieContent = decodedCookie.split(';');
+
+    for(var i = 0; i <cookieContent.length; i++) {
+      var c = cookieContent[i];
+
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+
+    return false;
+  }
+
+  function delete_cookie_by_name(name) {
+    document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  }
+
+  function unloadGoogleAnalytics() {
+    var payload = {"name":"m","allowLinker":true};
+    var accountId = "UA-11834194-7";
+
+    // Set the GA User Opt-out flag
+    window['ga-disable-'+accountId] = true;
+
+    // Do not explicitly make any further calls to ga()
+    ga(payload.name+".remove");
+
+    // Delete any existing GA cookies (_ga, _gat & _gaid) and GA Client ID from localStorage
+    delete_cookie_by_name('_ga');
+    delete_cookie_by_name('_gat');
+    delete_cookie_by_name('_gid');
+
+    // Delete LocalStorage Entries
+    if (Market.Helpers.GaLsUtils.localStorageAvailable()) {
+      var clientId = Market.Helpers.GaLsUtils.getClientId();
+
+      if (!clientId) {
+        return;
+      }
+
+      Market.Helpers.GaLsUtils.removeClientId();
+    }
+
+    // Do not transmit the Client ID to other sites upon navigation (i.e. autoLink)
+  }
+
+  function domLoaded() {
+    return new Promise(resolve => {
+      if (
+        document.readyState === 'interactive' ||
+        document.readyState === 'complete'
+      ) {
+        resolve()
+      } else {
+        document.addEventListener(
+          'DOMContentLoaded',
+          () => {
+            resolve()
+          },
+          {
+            capture: true,
+            once: true,
+            passive: true
+          }
+        )
+      }
+    })
+  }
+
+  function consentToExperimentsEnrollmentGiven () {
+    return Market.Helpers.CookieConsent.given('preferences') && Market.Helpers.CookieConsent.given('statistics');
+  }
+
+  function unenrollFromExperiments() {
+    var activeExperimentsConfig = {"globalExperiment":{"id":"Q4KMAh3BQ4qNUNsdMXdprg","loadingCover":true,"variants":["0","1"],"domain":"themeforest.net","variantsWeights":[1,9],"requires":{}},"storefrontCodeCanyon":{"id":"qv0h1k7JTwen6K2sEuOK3Q","loadingCover":false,"variants":["0","1"],"domain":"themeforest.net","variantsWeights":[1,1],"requires":{"globalExperiment":{"variants":[1]}}},"storefrontThemeForest":{"id":"ha2WWrPVRYOHNm6-HvDILg","loadingCover":false,"variants":["0","1"],"domain":"themeforest.net","variantsWeights":[1,1],"requires":{"globalExperiment":{"variants":[1]}}}}
+    var deletedCookies = [];
+
+    _.each(activeExperimentsConfig, function(expConfig, name) {
+      var cookieName =  "market_experiment_" + expConfig.id;
+
+      if ($.cookie(cookieName) != null && $.cookie(cookieName) != '' && typeof($.cookie(cookieName)) != 'undefined') {
+        $.removeCookie(cookieName, { path: '/', domain: '.' + expConfig.domain });
+        deletedCookies.push(cookieName);
+      }
+    });
+
+    if(deletedCookies.length > 0 && typeof(t) != 'undefined') {
+      ga(t+'.set', "exp", null);
+      ga(t+'.set', "dimension21", null);
+      ga(t+'.set', "dimension22", null);
+    }
+  }
+
+  function enrolIntoActiveExperiments() {
+    var activeExperimentsConfig = {"globalExperiment":{"id":"Q4KMAh3BQ4qNUNsdMXdprg","loadingCover":true,"variants":["0","1"],"domain":"themeforest.net","variantsWeights":[1,9],"requires":{}},"storefrontCodeCanyon":{"id":"qv0h1k7JTwen6K2sEuOK3Q","loadingCover":false,"variants":["0","1"],"domain":"themeforest.net","variantsWeights":[1,1],"requires":{"globalExperiment":{"variants":[1]}}},"storefrontThemeForest":{"id":"ha2WWrPVRYOHNm6-HvDILg","loadingCover":false,"variants":["0","1"],"domain":"themeforest.net","variantsWeights":[1,1],"requires":{"globalExperiment":{"variants":[1]}}}}
+
+    var independentExperimentConfigs = _.reduce(activeExperimentsConfig, function(memo, expConfig, name) {
+      if(_.isEmpty(expConfig.requires)) {
+        memo[name] = expConfig;
+      }
+      return memo;
+    }, {});
+
+    var dependentExperimentConfigs = _.reduce(activeExperimentsConfig, function(memo, expConfig, name) {
+      if(!_.isEmpty(expConfig.requires)) {
+        memo[name] = expConfig;
+      }
+      return memo;
+    }, {});
+
+    var experimentsConfig = {...independentExperimentConfigs, ...dependentExperimentConfigs};
+
+    if (!_.isEmpty(experimentsConfig)) {
+      var experimentEnrolments = createExperimentEnrollments(experimentsConfig);
+      window.dispatchEvent(new CustomEvent('ExperimentsReady', { payload: experimentEnrolments }));
+    }
+  }
+
+  function areRequirementsMet(experimentsConfig, requiredExperiments) {
+    return _.reduce(requiredExperiments, function(memo, requiredExperimentVariants, requiredExperimentName){
+      var requiredExperiment = experimentsConfig[requiredExperimentName];
+      var requiredExperimentCookieName = "market_experiment_" + requiredExperiment.id;
+      var requiredExperimentVariantEnabled = _.contains(requiredExperimentVariants.variants, +$.cookie(requiredExperimentCookieName));
+
+      return memo && requiredExperimentVariantEnabled;
+    }, true)
+  }
+
+  function selectExperimentVariant(expConfig) {
+    var variantWeights = _.object(expConfig.variants, expConfig.variantsWeights);
+
+    return _.chain(variantWeights).map(function (weight, variant) {
+      return _.times(weight, function() { return variant; });
+    }).flatten().sample().value();
+  }
+
+  function createExperimentEnrollments(activeExperimentsConfig) {
+    var enrollments = _.reduce(activeExperimentsConfig, function(memo, expConfig, name) {
+      var cookieName = "market_experiment_" + expConfig.id;
+
+      if (!$.cookie(cookieName)) {
+        var requirementsMet = areRequirementsMet(activeExperimentsConfig, expConfig.requires);
+
+        if (requirementsMet) {
+          var variant = selectExperimentVariant(expConfig)
+          $.cookie(cookieName, variant, { expires: 365, domain: expConfig.domain, path: '/' });
+        }
+      }
+      if ($.cookie(cookieName)) {
+        memo[expConfig.id] = $.cookie(cookieName);
+      }
+
+      return memo;
+    }, {});
+
+    var enrollmentsString = _.map(_.pairs(enrollments), function(pair) { return pair.join("."); }).join("!");
+
+    ga(t+'.set', "exp", enrollmentsString);
+    ga(t+'.set', "dimension21", enrollmentsString);
+    ga(t+'.set', "dimension22", enrollmentsString);
+
+    return enrollments;
+  }
+
+  function loadLinkingForAllAccounts() {
+    domLoaded().then(() => {
+      var ACCOUNTS = ["m"];
+      window._envGaTrackerNames = ACCOUNTS;
+
+      for (var i = 0; i < ACCOUNTS.length; i++) {
+        t = ACCOUNTS[i];
+
+        ga(t+'.require', 'linker');
+
+        ga(t+'.require', 'linkid', 'linkid.js');
+      };
+
+      document.body.addEventListener('click', function(event) {
+        decorateLink(event);
+      });
+      document.body.addEventListener('contextmenu', function(event) {
+        // Aside from a normal click, we need to handle the variety of ways users
+        // can open a link in a new tab
+        // Right click to open context menu
+        decorateLink(event);
+      });
+      document.body.addEventListener('mousedown', function(event) {
+        // Aside from a normal click, we need to handle the variety of ways users
+        // can open a link in a new tab
+        // Middle mouse button click
+        if (event.button === 1) {
+          decorateLink(event);
+        }
+      });
+    });
+  }
+
+  function decorateLink(event) {
+
+    var ACCOUNTS = ["m"];
+    window._envGaTrackerNames = ACCOUNTS;
+
+    var currentTarget = jQuery(event.target);
+    var link = currentTarget.closest('a')[0];
+    var ourDomains = ["activeden.net","audiojungle.net","themeforest.net","videohive.net","graphicriver.net","3docean.net","codecanyon.net","photodune.net","market.styleguide.envato.com","elements.envato.com","build.envatohostedservices.com","author.envato.com","tutsplus.com","sites.envato.com"];
+    var filteredDomains = ourDomains.filter(function(domain) {
+      return domain !== document.location.hostname;
+    });
+
+    for (var i = 0; i < ACCOUNTS.length; i++) {
+      t = ACCOUNTS[i];
+
+      if (link && link.href) {
+        if (filteredDomains.includes(link.hostname) || currentSiteLinkOpensInNewWindow(link)) {
+          ga(t+'.linker:decorate', link)
+        }
+      }
+    }
+  }
+
+  function currentSiteLinkOpensInNewWindow(link) {
+    return document.location.hostname === link.hostname && link.target === '_blank';
+  }
+
+  function setupGoogleAnalytics() {
+    (function () {
+      var accountId = "UA-11834194-7";
+      window['ga-disable-'+accountId] = false;
+
+      if (Market.Helpers.GaLsUtils.localStorageAvailable()) {
+        var options = {"name":"m","allowLinker":true};
+
+        options.storage = "none";
+        options.clientId = Market.Helpers.GaLsUtils.getClientId();
+
+        var clientIdValid = Market.Helpers.GaLsUtils.clientIdValid(options.clientId);
+        if (!clientIdValid) {
+          options.clientId = null;
+        }
+
+        ga("create", "UA-11834194-7", options);
+        ga(function() {
+          var tracker = ga.getByName(options.name);
+          Market.Helpers.GaLsUtils.storeClientId(tracker.get('clientId'));
+        })
+      } else {
+        ga("create", "UA-11834194-7", {"name":"m","allowLinker":true});
+      }
+
+      var ACCOUNTS = ["m"];
+      window._envGaTrackerNames = ACCOUNTS;
+
+      for (var i = 0; i < ACCOUNTS.length; i++) {
+        t = ACCOUNTS[i];
+
+        ga(t+'.require', "GTM-5VPWWP");
+
+        ga(t+'.require', 'ec');
+
+        ga(t+'.require', 'displayfeatures');
+
+        ga(t+'.set', 'dimension20', 'other')
+
+
+
+
+        if (!getCookie('CookieConsent') || consentToExperimentsEnrollmentGiven()) {
+            enrolIntoActiveExperiments();
+        }
+
+
+        if ('') {
+          ga(t+'.send', {
+            hitType: 'pageview',
+            page: ''
+          });
+        } else if ('') {
+          // append the analytics_suffix to the page path so the flash alert/error type can be tracked
+          var analyticsSuffix = $.trim('').replace(/([A-Z])/g, '$1').replace(/[-_\s]+/g, '-').toLowerCase();
+          var uri = URI(window.location.pathname + window.location.search);
+          uri.path(uri.path() + '/' + analyticsSuffix);
+          var tracking_path = uri.path() + uri.search();
+          ga(t+'.send', {
+            hitType: 'pageview',
+            page: tracking_path,
+          });
+        } else {
+          ga(t+'.send', 'pageview');
+        }
+      }
+
+      loadLinkingForAllAccounts()
+    }());
+  }
+
+  function loadGoogleAnalytics() {
+    (function () {
+
+      var s=document.createElement('script');
+      s.type='text/javascript';
+      s.async=true;
+        s.src='https://www.google-analytics.com/analytics.js';
+      var x=document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s,x);
+    }());
+  }
+
+  
+
+//]]>
+</script>
+
+  
+<script nonce="wrp66G/nyAwePeITRH61Bw==">
+//<![CDATA[
+
+    if (typeof Cookiebot !== 'undefined' && Cookiebot.consent && Cookiebot.consent.statistics ) {
+      enableGoogleAnalyticsLinkWrapper();
+    } else {
+      window.addEventListener('CookiebotOnAccept', function (e) {
+        if (Cookiebot.consent.statistics) {
+          enableGoogleAnalyticsLinkWrapper();
+        }
+      }, false);
+    }
+
+  function enableGoogleAnalyticsLinkWrapper() {
+    // GA: universal analytics link wrapper
+    (function(){
+        window._envTrkrs = [["m", "UA-11834194-7"]];
+
+        var debug = false;
+        var MAX_RETRIES = 10;
+
+        /*
+           The script needs to wait until the Analytics script
+           has been downloaded from Google before initializing
+        */
+        var waitForAnalytics = function(){
+            this.count = this.count || 0;
+
+            if (window.ga && ga.getByName) {
+                e.init();
+            } else {
+                if (count < MAX_RETRIES) { setTimeout(waitForAnalytics, 250); }
+                count++;
+            }
+        };
+
+        var e = {
+            _envArray: [],
+            _envTrkrs: (window._envTrkrsCust && window._envTrkrsCust.length) ? window._envTrkrs.concat(window._envTrkrsCust) : window._envTrkrs,
+            init: function() {
+                for (var i=0; i < _envTrkrs.length; i++) {
+                  if(!ga.getByName(_envTrkrs[i][0])) {
+                    if (Market.Helpers.GaLsUtils.localStorageAvailable()) {
+                      var clientId = Market.Helpers.GaLsUtils.getClientId();
+
+                      ga("create", _envTrkrs[i][1], "auto", {name: _envTrkrs[i][0], storage: "none", clientId: clientId, allowLinker: true});
+                    } else {
+                      ga("create", _envTrkrs[i][1], "auto", {name: _envTrkrs[i][0], allowLinker: true});
+                    }
+                  }
+                }
+
+                document.addEventListener('DOMContentLoaded', function(){
+                    e.wrapperInit();
+                });
+
+                if (debug) {console.log('Initiated');}
+            },
+            wrapperInit: function() {
+                if (typeof window._envIsRunning != 'undefined' || window._envIsRunning == true) {
+                    return
+                }
+                window._envIsRunning = true;
+
+                if (document.addEventListener) {
+                    document.addEventListener('click', function(event){
+                        var target = event.target;
+                        if (target && target.tagName === 'A') {
+                            e._envLinksTracker(event);
+                        }
+                    });
+                }
+            },
+            isInArray: function(e, t) {
+                for (var n = 0; n < t.length; n++) {
+                    var r = new RegExp(t[n], 'i');
+                    if (r.test(e)) {
+                        return n
+                    }
+                }
+                return -1
+            },
+            _envTrackevent: function(e, t, n, r) {
+                for (var i = 0; i < this._envTrkrs.length; i++) {
+                    var s = this._envTrkrs[i][0].length == 0 ? '' : this._envTrkrs[i][0] + '.';
+                    r.length == 0 ? ga(s + 'send', 'event', e, t, n) : ga(s + 'send', 'event', e, t, n, r)
+                }
+            },
+            _envTrackpageview: function(e, t) {
+                t = t.charAt(0) == '/' ? t : '/' + t;
+                for (var n = 0; n < this._envTrkrs.length; n++) {
+                    var r = this._envTrkrs[n][0].length == 0 ? '' : this._envTrkrs[n][0] + '.';
+                    ga(r + 'send', 'pageview', e + t);
+                }
+            },
+            _envLinksTracker: function(t) {
+                var r = false;
+                var i = {
+                    outbound: {
+                        run: true,
+                        useEvent: true
+                    },
+                    download: {
+                        run: true,
+                        useEvent: true,
+                        reg: ''
+                    },
+                    self: {
+                        run: false,
+                        useEvent: true
+                    },
+                    mail: {
+                        run: true,
+                        useEvent: true
+                    },
+                    ext: /\.(doc.?|xls.?|ppt.?|exe|zip|rar|gz|tar|tgz|dmg|csv|pdf|xpi|txt|mp3)$/i
+                };
+                var s = t.srcElement ? t.srcElement : this;
+                if (t.srcElement) {
+                    r = true
+                }
+                while (s.tagName != 'A') {
+                    s = s.parentNode
+                }
+                if (s.href == undefined || s.href == null) {
+                    return true
+                }
+                var o = s.href;
+                if (o.length == 0) return;
+                var u = s.hostname.toLowerCase();
+                var a = s.pathname;
+                if (a.length == 0) {
+                    a = '/'
+                } else if (a.substr(0, 1) != '/') {
+                    a = '/' + a
+                }
+                var f = s.protocol;
+                var l = s.search;
+                var c = location.hostname;
+                c = c.replace(/^www\./i, '').toLowerCase();
+                u = u.replace(/^www\./i, '').toLowerCase();
+                if (o.match(/^#/)) {
+                    if (i.self.run) {
+                        i.self.useEvent ? e._envTrackevent('self', 'click - ' + c, o, '') : e._envTrackpageview('/virtual/self', '/' + o);
+                        return true
+                    }
+                } else if (f.match(/^mailto:/i)) {
+                    if (i.mail.run) {
+                        o = o.replace(/^mailto:/i, '');
+                        i.mail.useEvent ? e._envTrackevent('mailto', 'click - ' + c, o, '') : e._envTrackpageview('/virtual/mailto', o);
+                        return true
+                    }
+                } else if ((new RegExp(i.ext)).test(a)) {
+                    if (i.download.run) {
+                        o = o.replace(/^https?:\/\//i, '');
+                        i.download.useEvent ? e._envTrackevent('download', 'click - ' + c, o, '') : e._envTrackpageview('/virtual/download', o);
+                        return true
+                    }
+                } else if (u == undefined || u.length == 0 || f.match(/^javascript:/i)) {
+                    return
+                } else if ((new RegExp(c + '$', 'i')).test(u) || (new RegExp(u + '$', 'i')).test(c)) {
+                    if (i.download.run && i.download.reg.length != 0) {
+                        if ((new RegExp(i.download.reg, 'i')).test(a + l)) {
+                            o = o.replace(/^https?:\/\//i, '');
+                            i.download.useEvent ? e._envTrackevent('download', 'click - ' + c, o, '') : e._envTrackpageview('/virtual/download', o);
+                            return true
+                        }
+                    }
+                } else if (u != c) {
+                    if (e.isInArray(u, e._envArray) == -1) {
+                        if (i.outbound.run) {
+                            i.outbound.useEvent ? e._envTrackevent('outbound', 'click - ' + c, u + a + l, '') : e._envTrackpageview('/virtual/outbound', u + a);
+                            return true
+                        }
+                    } else if (e.isInArray(u, e._envArray) != -1) {
+                        var h = s.target;
+                        if (h != null && h == '_blank') {
+                            if ((new RegExp(/_utma=/)).test(l)) {
+                                return true
+                            }
+                            var p = e._envTrkrs[0][0].length == 0 ? '' : _envTrkrs[0][0] + '.';
+                            return true
+                        } else {
+                            return false
+                        }
+                    }
+                }
+            }
+        };
+
+        waitForAnalytics();
+    })()
+  }
+
+//]]>
+</script>
+
+
+
+<script nonce="wrp66G/nyAwePeITRH61Bw==">
+//<![CDATA[
+  // Set New Relic custom attributes
+  (function () {
+    if (typeof newrelic !== 'undefined') {
+      newrelic.setCustomAttribute('pageType', 'other')
+    }
+  })()
+
+//]]>
+</script>
+
+  <script nonce="wrp66G/nyAwePeITRH61Bw==">
+//<![CDATA[
+    if (typeof Cookiebot !== 'undefined' && Cookiebot.consent && Cookiebot.consent.marketing) {
+      enableGoogleTagManager();
+    } else {
+      window.addEventListener('CookiebotOnAccept', function (e) {
+        if (Cookiebot.consent.marketing) {
+          enableGoogleTagManager();
+        }
+      }, false);
+    }
+
+  function enableGoogleTagManager() {
+    var gtmId = 'GTM-585RXMV';
+    // Google Tag Manager Tracking Code
+    (function(w,d,s,l,i) {
+      w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer',gtmId);
+
+
+    window.addEventListener('load', function() {
+      window.dataLayer.push({
+        event: 'pinterestReady'
+      });
+    });
+  }
+
+//]]>
+</script>
+
+</body></html> -->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Classic - Minimal CV/Personal Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+
+    <!-- fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300,300italic,700,500,500italic,700italic,400italic%7CLato:400,700,300' rel='stylesheet' type='text/css'>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" type="text/css" />
+    <link rel="stylesheet" href="./css/owl.transitions.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+
+</head>
+
+<body>
+
+    <div id="loader">
+        <div class="box-one"></div>
+        <div class="box-two"></div>
+        <div class="box-three"></div>
+        <div class="box-four"></div>
+    </div><!-- /.loader -->
+
+    <nav class="menu">
+        <ul class="menu-ul">
+            <li> <a href="#about"> About </a> </li>
+            <li> <a href="#skill-education"> Education </a> </li>
+            <li> <a href="#experience-testimonials"> Experience </a> </li>
+            <li> <a href="#portfolio"> Portfolio </a> </li>
+            <li> <a href="#contact"> Contact </a> </li>
+        </ul><!-- /. menu list -->
+        <div class="menu-holder">
+            <div class="menu-bar"></div>
+        </div>
+    </nav><!-- /. menu -->
+
+    <section id="home" class="header" style="background-image: url('assets/images/cover.jpg')">
+        <div class="sector">
+            <div class="box">
+                <h1> J </h1> <!-- name first char -->
+            </div>
+            <h1 class="main-title"> John Doe </h1><!-- /. name -->
+            <h4 class="tagline"> Web | UI designer </h4><!-- /. profession -->
+        </div>
+    </section> <!-- /. header/cover -->
+
+    <section id="about">
+        <!-- Big Section Background Title -->
+        <h1 class="section-big-title til hidden-xs hidden-sm" data-in-effect="fadeInUp" data-out-effect="fadeInDown">about</h1><!-- /. large title -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-sm-push-8">
+                   
+                    <div class="section-holder texture">
+                        <!-- draw line art -->
+                        <div class="line-art-top">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- /.top line -->
+                        <div class="line-art-bottom">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- /.bottom line -->
+                        <div class="line-art-left">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- /.left line -->
+                        <div class="line-art-right">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- /.right line -->
+
+                        <div class="img-holder">
+                            <img src="assets/images/avatar.jpg" class="img-responsive img-circle" alt="John Doe">
+                        </div>
+                        <div class="sep-mini"></div>
+                        <h4> Name: John Stuart Doe </h4>
+                        <h4> Date of birth: 28-Aug-1990 </h4>
+                        <h4> Nationality: Canadian </h4>
+                        
+                         <div class="social-links">
+                            <a href="#url"> <i class="ion-social-twitter-outline i-size-small"></i> </a>
+                            <a href="#url"> <i class="ion-social-facebook-outline i-size-small"></i> </a>
+                            <a href="#url"> <i class="ion-social-dribbble-outline i-size-small"></i> </a>
+                            <a href="#url"> <i class="ion-social-github-outline i-size-small"></i> </a>
+                         </div><!-- /.social-links -->
+                        <!-- id used as tooltip title -->
+                        <a class="tooltip-cl cv-download" data-tooltip="Download CV" href="#cv-url"> <i class="ion-ios-download-outline i-size-small"></i> </a>
+
+                     </div><!-- /.section-holder -->
+                </div><!-- /. row -->
+
+                <!-- /.col-sm-4 -->
+                <div class="col-sm-8 col-sm-pull-4">
+                    <div class="section-holder">
+                        <!-- short bio -->
+                        <div class="icon-holder i-size-big">
+                            <i class="ion-ios-compose-outline"></i>
+                        </div>
+                        <h3 class="section-title"> About Me </h3>
+                        <p>
+                            Beast. Meat set greater she'd creeping from were under bearing won't wherein it open. Light. From midst all fill saying day Very void land their fly.
+                            <br/>
+                            Heaven green without whose replenish seasons there brought, over own sixth in Beginning. 
+                            <br/> <br/>All behold. Our every fruitful so.  
+                        </p>
+                        
+                        <!-- hobbies -->
+                        <div class="icon-holder i-size-small">
+                            <i class="ion-ios-baseball-outline"></i>
+                        </div>
+                        <h4> Hobbies </h4>
+                        <p> bicycling | gaming | hiking | photography </p>
+                        
+                        <!-- twitter feed -->
+                        <div class="icon-holder i-size-small">
+                            <i class="ion-social-twitter-outline"></i>
+                        </div>
+                        <h4> Latest Tweet </h4>
+                        <div class="tweet"></div>
+
+                    </div><!-- /.section-holder -->
+                </div><!-- /.col -->
+            </div><!-- /. row -->
+        </div><!-- /. container -->
+    </section><!-- /.about -->
+
+    <section id="skill-education">
+        <!-- Big Section Background Title -->
+        <h1 class="section-big-title til hidden-xs hidden-sm" data-in-effect="fadeInUp" data-out-effect="fadeInDown">education</h1><!-- /. large title -->
+
+        <div class="container">
+            <div class="row">
+                <!-- skills -->
+                <div class="col-sm-4">
+                    <div class="section-holder texture">
+                        <!-- draw line art -->
+                        <div class="line-art-top">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- /.top line -->
+                        <div class="line-art-bottom">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- /.bottom line -->
+                        <div class="line-art-left">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- /.left line -->
+                        <div class="line-art-right">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- /.right line -->
+
+                        <!-- skills -->
+                        <div class="icon-holder i-size-big">
+                            <i class="ion-ios-star-outline"></i>
+                        </div>
+
+                        <h3> Skills </h3>
+                        
+                        <div class="skill-holder">
+                        
+                        <div class="skill-area">
+                        <h4 class="skill-title"> Professional </h4><!-- /.skill type name -->
+                            
+                            <div class="skillbar clearfix" data-percent="90%">
+                                <div class="skillbar-title">
+                                    <span>CSS</span>
+                                </div>
+                                <div class="skillbar-bg">
+                                </div>
+                                <div class="skillbar-bar to-animate">
+                                </div>
+                                <div class="skill-bar-percent">
+                                    90%
+                                </div>
+                            </div> <!-- /.skill bar -->
+                            
+                            <div class="skillbar clearfix" data-percent="95%">
+                                <div class="skillbar-title">
+                                    <span>HTML</span>
+                                </div>
+                                <div class="skillbar-bg">
+                                </div>
+                                <div class="skillbar-bar to-animate">
+                                </div>
+                                <div class="skill-bar-percent">
+                                    95%
+                                </div>
+                            </div> <!-- /.skill bar -->
+
+                            <div class="skillbar clearfix" data-percent="90%">
+                                <div class="skillbar-title">
+                                    <span>CSS</span>
+                                </div>
+                                <div class="skillbar-bg">
+                                </div>
+                                <div class="skillbar-bar to-animate">
+                                </div>
+                                <div class="skill-bar-percent">
+                                    90%
+                                </div>
+                            </div> <!-- /.skill bar -->
+
+                            <div class="skillbar clearfix" data-percent="80%">
+                                <div class="skillbar-title">
+                                    <span>jQuery</span>
+                                </div>
+                                <div class="skillbar-bg">
+                                </div>
+                                <div class="skillbar-bar to-animate">
+                                </div>
+                                <div class="skill-bar-percent">
+                                    80%
+                                </div>
+                            </div> <!-- /.skill bar -->
+                        </div> <!-- /.skill area -->
+
+                        <div class="skill-area">
+                        <h4 class="skill-title"> Intermediate </h4><!-- /.skill type name -->
+                            <div class="skillbar clearfix" data-percent="80%">
+                                <div class="skillbar-title">
+                                    <span>Portrait Sketch</span>
+                                </div>
+                                <div class="skillbar-bg">
+                                </div>
+                                <div class="skillbar-bar">
+                                </div>
+                                <div class="skill-bar-percent">
+                                    80%
+                                </div>
+                            </div> <!-- /.skill bar -->
+
+                            <div class="skillbar clearfix" data-percent="75%">
+                                <div class="skillbar-title">
+                                    <span>Photography</span>
+                                </div>
+                                <div class="skillbar-bg">
+                                </div>
+                                <div class="skillbar-bar">
+                                </div>
+                                <div class="skill-bar-percent">
+                                    75%
+                                </div>
+                            </div> <!-- /.skill bar -->
+
+                            <div class="skillbar clearfix" data-percent="90%">
+                                <div class="skillbar-title">
+                                    <span>iOS</span>
+                                </div>
+                                <div class="skillbar-bg">
+                                </div>
+                                <div class="skillbar-bar">
+                                </div>
+                                <div class="skill-bar-percent">
+                                    90%
+                                </div>
+                            </div> <!-- /.skill bar -->
+
+                            <div class="skillbar clearfix" data-percent="88%">
+                                <div class="skillbar-title">
+                                    <span>Android</span>
+                                </div>
+                                <div class="skillbar-bg">
+                                </div>
+                                <div class="skillbar-bar">
+                                </div>
+                                <div class="skill-bar-percent">
+                                    88%
+                                </div>
+                            </div> <!-- /.skill bar -->
+                        </div> <!-- /.skill area -->
+                        
+                        <div class="skill-area">
+                        <h4 class="skill-title"> Beginner </h4><!-- /.skill type name -->
+                            <div class="skillbar clearfix" data-percent="20%">
+                                <div class="skillbar-title">
+                                    <span>Laziness</span>
+                                </div>
+                                <div class="skillbar-bg">
+                                </div>
+                                <div class="skillbar-bar">
+                                </div>
+                                <div class="skill-bar-percent">
+                                    20%
+                                </div>
+                            </div> <!-- /.skill bar -->
+
+                            <div class="skillbar clearfix" data-percent="40%">
+                                <div class="skillbar-title">
+                                    <span>Swimming</span>
+                                </div>
+                                <div class="skillbar-bg">
+                                </div>
+                                <div class="skillbar-bar">
+                                </div>
+                                <div class="skill-bar-percent">
+                                    40%
+                                </div>
+                            </div> <!-- /.skill bar -->
+                        </div> <!-- /.skill area -->
+
+                        </div> <!-- /.skill-holder -->
+                    </div> <!-- /.section-holder -->
+                </div> <!-- /.col-sm-4 -->
+                
+                <!-- education -->
+                <div class="col-sm-8">
+                    <div class="section-holder">
+                        <div class="icon-holder i-size-big">
+                            <i class="ion-ios-lightbulb-outline"></i>
+                        </div>
+                        <h3> Education </h3>
+                        <div class="time-line">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="time-item">
+                                        <div class="time-year">
+                                            2013-Present
+                                        </div>
+                                        <div class="icon-holder-time wow fadeIn">
+                                            <i class="ion-ios-circle-outline"></i>
+                                        </div>
+                                        <h4 class="time-title">
+                                        ILD University of Technology
+                                    </h4>
+                                        <h5 class="time-semitag"> Major in Computer Science </h5>
+                                        <p>
+                                            Given two spirit very unto firmament. Fourth and she'd their fruit together.
+                                        </p>
+                                    </div>
+                                </div><!-- /.col-md-12 -->
+                                <div class="col-sm-12">
+                                    <div class="time-item">
+                                        <div class="time-year">
+                                            2011-2013
+                                        </div>
+                                        <div class="icon-holder-time wow fadeIn" data-wow-delay=".25s">
+                                            <i class="ion-ios-circle-outline"></i>
+                                        </div>
+                                        <h4 class="time-title">
+                                        Newton College of Science & Arts
+                                    </h4>
+                                        <h5 class="time-semitag"> Standard Applied Science </h5>
+                                        <p>
+                                            Given two spirit very unto firmament. Fourth and she'd their fruit together.
+                                        </p>
+                                    </div>
+                                </div><!-- /.col-md-12 -->
+                                <div class="col-sm-12">
+                                    <div class="time-item">
+                                        <div class="time-year">
+                                            2009-2011
+                                        </div>
+                                        <div class="icon-holder-time wow fadeIn" data-wow-delay=".5s">
+                                            <i class="ion-ios-circle-outline"></i>
+                                        </div>
+                                        <h4 class="time-title">
+                                        Twinkle Higher Secondary School
+                                    </h4>
+                                        <h5 class="time-semitag"> Standard Secondary Science </h5>
+                                        <p>
+                                            Given two spirit very unto firmament. Fourth and she'd their fruit together.
+                                        </p>
+                                    </div>
+                                </div><!-- /.col-md-12 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.time-line -->
+                    </div><!-- /.section-holder -->
+                </div><!-- /.section-holder -->
+            </div><!-- /.col-md-8 -->
+        </div><!-- /.container -->
+    </section><!-- /.skill & education -->
+
+    <section id="experience-testimonials">
+        <!-- Big Section Background Title -->
+        <h1 class="section-big-title til hidden-xs hidden-sm" data-in-effect="fadeInUp" data-out-effect="fadeInDown">experience</h1><!-- /. large title -->
+
+        <div class="container">
+            <div class="row">
+                <!-- work experience -->
+                <div class="col-sm-8">
+                    <div class="section-holder">
+                        <div class="icon-holder i-size-big">
+                            <i class="ion-ios-briefcase-outline"></i>
+                        </div>
+                        <h3> Work Experience </h3>
+                        <div class="time-line">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="time-item">
+                                        <div class="time-year">
+                                            2015-Present
+                                        </div>
+                                        <div class="icon-holder-time wow fadeIn">
+                                            <i class="ion-ios-circle-outline"></i>
+                                        </div>
+                                        <h4 class="time-title">
+                                        BulkStudio
+                                    </h4>
+                                        <h5 class="time-semitag"> Senior Web Designer </h5>
+                                        <p>
+                                            Given two spirit very unto firmament. Fourth and she'd their fruit together.
+                                        </p>
+                                    </div>
+                                    <div class="work-item-icon">
+                                    </div>
+                                </div><!-- /.col-md-12 -->
+
+                                <div class="col-sm-12">
+                                    <div class="time-item">
+                                        <div class="time-year">
+                                            2014-2015
+                                        </div>
+                                        <div class="icon-holder-time wow fadeIn" data-wow-delay=".25s">
+                                            <i class="ion-ios-circle-outline"></i>
+                                        </div>
+                                        <h4 class="time-title">
+                                        Orion Technology 
+                                    </h4>
+                                        <h5 class="time-semitag"> Junior Web Designer </h5>
+                                        <p>
+                                            Given two spirit very unto firmament. Fourth and she'd their fruit together.
+                                        </p>
+                                    </div>
+                                </div><!-- /.col-md-12 -->
+
+                                <div class="col-sm-12">
+                                    <div class="time-item">
+                                        <div class="time-year">
+                                            2013-2014
+                                        </div>
+                                        <div class="icon-holder-time wow fadeIn" data-wow-delay=".5s">
+                                            <i class="ion-ios-circle-outline"></i>
+                                        </div>
+                                        <h4 class="time-title">
+                                        Cubic Web Development Agency
+                                    </h4>
+                                        <h5 class="time-semitag"> Developer Internship </h5>
+                                        <p>
+                                            Given two spirit very unto firmament. Fourth and she'd their fruit together.
+                                        </p>
+                                    </div>
+                                </div><!-- /.col-md-12 -->
+
+                            </div><!-- /.time-line -->
+                        </div><!-- /.row -->
+                    </div><!-- /.section-holder -->
+                </div><!-- /.col-md-8 -->
+
+                <!-- testimonials -->
+                <div class="col-sm-4">
+                    <div class="section-holder texture">
+                       
+                        <!-- draw line art -->
+                        <div class="line-art-top">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- /.top line -->
+                        <div class="line-art-bottom">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- /.bottom line -->
+                        <div class="line-art-left">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- /.left line -->
+                        <div class="line-art-right">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- /.right line -->
+
+                        <div class="icon-holder i-size-big">
+                            <i class="ion-ios-chatboxes-outline"></i>
+                        </div>
+
+                        <h3> Testimonials </h3>
+                        <div class="testi-holder owl-carousel owl-theme">
+                            
+                            <div class="testi-item">
+                                <img src="assets/images/testimonial/testi1.jpg" class="img-circle" alt="Anthony Doe"/>
+                                <p> Pefect, this is exactly what I needed for me. Really great work. </p>
+                                <div class="testi-bottom">
+                                    <div class="i-size-small testi-icon">
+                                        <i class="ion-ios-chatbubble-outline"></i>
+                                    </div>
+                                    <h5> Anthony Doe </h5>
+                                    <p> CEO, XB Inc </p>
+                                </div>
+                            </div><!-- /.testi-item -->
+
+                            <div class="testi-item">
+                                <img src="assets/images/testimonial/testi2.jpg" class="img-circle" alt="Jenna Doe"/>
+                                <p> Very much satisfied by the work. Highly recommended! </p>
+                                <div class="testi-bottom">
+                                    <div class="i-size-small testi-icon">
+                                        <i class="ion-ios-chatbubble-outline"></i>
+                                    </div>
+                                    <h5> Jenna Doe </h5>
+                                    <p> Owner, Fashion Store </p>
+                                </div>
+                            </div><!-- /.testi-item -->
+
+                            <div class="testi-item">
+                                <img src="assets/images/testimonial/testi3.jpg" class="img-circle" alt="Michael Hussey"/>
+                                <p> Good work done by the designer. Really clean and organized approach. </p>
+                                <div class="testi-bottom">
+                                    <div class="i-size-small testi-icon">
+                                        <i class="ion-ios-chatbubble-outline"></i>
+                                    </div>
+                                    <h5> Michael Hussey </h5>
+                                    <p> Manager, Basic Consultants </p>
+                                </div>
+                            </div><!-- /.testi-item -->
+
+                        </div><!-- /.testi-holder -->
+                    </div><!-- /.section-holder -->
+                </div><!-- /.col-md-4 -->
+            </div><!-- /.row -->
+        </div><!-- container -->
+    </section><!-- work experience & testimonials -->
+
+    <section id="work-process">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-holder">
+                        <div class="text-center">
+                            <div class="icon-holder-center i-size-big">
+                                <i class="ion-ios-pulse"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-center"> Work Process </h3>
+                        
+                        <ul class="process">
+                            <li class="wow fadeIn" data-wow-delay=".15s">
+                                <div class="icon-process i-size-med">
+                                    <i class="ion-ionic"></i>
+                                </div>
+                                <h4>Discover</h4>
+                                <h6 class="step">1</h6>
+                            </li><!-- /.process item -->
+
+                            <li class="wow fadeIn" data-wow-delay=".3s">
+                                <div class="icon-process i-size-med">
+                                    <i class="ion-magnet"></i>
+                                </div>
+                                <h4>Idea</h4>
+                                <h6 class="step">2</h6>
+                            </li><!-- /.process item -->
+
+                            <li class="wow fadeIn" data-wow-delay=".45s">
+                                <div class="icon-process i-size-med">
+                                    <i class="ion-scissors"></i>
+                                </div>
+                                <h4>Design</h4>
+                                <h6 class="step">3</h6>
+                            </li><!-- /.process item -->
+
+                            <li class="wow fadeIn" data-wow-delay=".6s">
+                                <div class="icon-process i-size-med">
+                                    <i class="ion-code-working"></i>
+                                </div>
+                                <h4>Develop</h4>
+                                <h6 class="step">4</h6>
+                            </li><!-- /.process item -->
+
+                            <li class="wow fadeIn" data-wow-delay=".75s">
+                                <div class="icon-process i-size-med">
+                                    <i class="ion-clock"></i>
+                                </div>
+                                <h4>Test</h4>
+                                <h6 class="step">5</h6>
+                            </li><!-- /.process item -->
+
+                            <li class="wow fadeIn" data-wow-delay=".9s">
+                                <div class="icon-process i-size-med">
+                                    <i class="ion-paper-airplane"></i>
+                                </div>
+                                <h4>Launch</h4>
+                                <h6 class="step">6</h6>
+                            </li><!-- /.process item -->
+
+                        </ul><!-- /.process -->
+                    </div><!-- /.section-holder -->
+                </div><!-- /.col-sm-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.work process -->
+
+    <section id="portfolio">
+        <!-- Big Section Background Title -->
+        <h1 class="section-big-title til hidden-xs hidden-sm" data-in-effect="fadeInUp" data-out-effect="fadeInDown">portfolio 
+        </h1>
+
+        <div class="container">
+            <div class="section-holder">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="icon-holder i-size-big">
+                            <i class="ion-ios-paper-outline"></i>
+                        </div>
+                        <h3> My Works </h3>
+                    </div><!-- /.col-sm-12 -->
+                </div><!-- /.row -->
+                
+                <div class="row">
+                <div class="port-holder">
+                    <div class="owl-item">
+               
+                            <div class="col-sm-12">
+                                <div class="box-it">
+                                    <a href="assets/images/portfolio/port1.jpg" class="mfp-image popup-it">
+                                        <img src="assets/images/portfolio/port1.jpg" class="img-responsive" alt="">
+                                        <div class="box-inner">
+                                            <div class="i-size-med">
+                                                <i class="ion-ios-photos-outline"></i>
+                                            </div>
+                                            <h4 class="title">
+                                        Line Home Delivery
+                                    </h4>
+                                            <h5 class="tag"> Site Design </h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div><!-- /.col-sm-12 -->
+                
+                            <div class="col-sm-12">
+                                <div class="box-it">
+                                    <a href="https://www.youtube.com/watch?v=6NC_ODHu5jg" class="mfp-iframe popup-it">
+                                        <img src="assets/images/portfolio/port2.jpg" class="img-responsive" alt="">
+                                        <div class="box-inner">
+                                            <div class="i-size-med">
+                                                <i class="ion-ios-play-outline"></i>
+                                            </div>
+                                            <h4 class="title">
+                                        T Singers Community
+                                    </h4>
+                                            <h5 class="tag"> Logo Design </h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div><!-- /.col-sm-12 -->
+                           
+                    </div> <!-- owl-item/portfolo item set -->
+
+                    <div class="owl-item">
+                            <!-- Portfolio items -->
+                            <div class="col-sm-12">
+                                <div class="box-it">
+                                    <a href="assets/images/portfolio/port3.jpg" class="mfp-image popup-it">
+                                        <img src="assets/images/portfolio/port3.jpg" class="img-responsive" alt="port1">
+                                        <div class="box-inner">
+                                            <div class="i-size-med">
+                                                <i class="ion-ios-photos-outline"></i>
+                                            </div>
+                                            <h4 class="title">
+                                        999 Multi Nation Comp
+                                    </h4>
+                                            <h5 class="tag"> Site Design </h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div><!-- /.col-sm-12 -->
+
+                            <div class="col-sm-12">
+                                <div class="box-it">
+                                    <a href="assets/images/portfolio/port4.jpg" class="mfp-image popup-it">
+                                        <img src="assets/images/portfolio/port4.jpg" class="img-responsive" alt="port2">
+                                        <div class="box-inner">
+                                            <div class="i-size-med">
+                                                <i class="ion-ios-photos-outline"></i>
+                                            </div>
+                                            <h4 class="title">
+                                        Sportsmen Weekly
+                                    </h4>
+                                            <h5 class="tag"> UI Design </h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div><!-- /.col-sm-12 -->
+                
+                    </div><!-- owl-item/portfolo item set -->
+
+                    <div class="owl-item">
+
+                            <!-- Portfolio items -->
+                            <div class="col-sm-12">
+                                <div class="box-it">
+                                    <a href="https://vimeo.com/70301553" class="mfp-iframe popup-it">
+                                        <img src="assets/images/portfolio/port5.jpg" class="img-responsive" alt="port3">
+                                        <div class="box-inner">
+                                            <div class="i-size-med">
+                                                <i class="ion-ios-play-outline"></i>
+                                            </div>
+                                            <h4 class="title">
+                                        Bulkstudio
+                                    </h4>
+                                            <h5 class="tag"> Logo Design </h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div><!-- /.col-sm-12 -->
+
+                            <div class="col-sm-12">
+                                <div class="box-it">
+                                    <a href="assets/images/portfolio/port6.jpg" class="mfp-image popup-it">
+                                        <img src="assets/images/portfolio/port6.jpg" class="img-responsive" alt="port4">
+                                        <div class="box-inner">
+                                            <div class="i-size-med">
+                                                <i class="ion-ios-photos-outline"></i>
+                                            </div>
+                                            <h4 class="title">
+                                        Datavision Ltd
+                                    </h4>
+                                            <h5 class="tag"> UI Design </h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div><!-- /.col-sm-12 -->
+                    
+                    </div><!-- owl-item/portfolo item set -->
+
+                    <div class="owl-item">
+                         
+                            <div class="col-sm-12">
+                                <div class="box-it">
+                                    <a href="assets/images/portfolio/port7.jpg" class="mfp-image popup-it">
+                                        <img src="assets/images/portfolio/port7.jpg" class="img-responsive" alt="port5">
+                                        <div class="box-inner">
+                                            <div class="i-size-med">
+                                                <i class="ion-ios-photos-outline"></i>
+                                            </div>
+                                            <h4 class="title">
+                                        vCard Design
+                                    </h4>
+                                            <h5 class="tag"> Site Design </h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div><!-- /.col-sm-12 -->
+
+                            <div class="col-sm-12">
+                                <div class="box-it">
+                                    <a href="assets/images/portfolio/port8.jpg" class="mfp-image popup-it">
+                                        <img src="assets/images/portfolio/port8.jpg" class="img-responsive" alt="port6">
+                                        <div class="box-inner">
+                                            <div class="i-size-med">
+                                                <i class="ion-ios-photos-outline"></i>
+                                            </div>
+                                            <h4 class="title">
+                                        Week End
+                                    </h4>
+                                            <h5 class="tag"> UI Design </h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div><!-- /.col-sm-12 -->
+                   
+                    </div><!-- owl-item/portfolo item set -->
+
+                    <div class="owl-item">
+                            
+                            <div class="col-sm-12">
+                                <div class="box-it">
+                                    <a href="https://vimeo.com/70301553" class="mfp-iframe popup-it">
+                                        <img src="assets/images/portfolio/port9.jpg" class="img-responsive" alt="port7">
+                                        <div class="box-inner">
+                                            <div class="i-size-med">
+                                                <i class="ion-ios-play-outline"></i>
+                                            </div>
+                                            <h4 class="title">
+                                        Themeforest
+                                    </h4>
+                                            <h5 class="tag"> Beautiful Design </h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div><!-- /.col-sm-12 -->
+                         
+                            <div class="col-sm-12">
+                                <div class="box-it">
+                                    <a href="assets/images/portfolio/port10.jpg" class="mfp-image popup-it">
+                                        <img src="assets/images/portfolio/port10.jpg" class="img-responsive" alt="port8">
+                                        <div class="box-inner">
+                                            <div class="i-size-med">
+                                                <i class="ion-ios-photos-outline"></i>
+                                            </div>
+                                            <h4 class="title">
+                                        Innovative
+                                    </h4>
+                                            <h5 class="tag"> UI Design </h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div><!-- /.col-sm-12 -->
+ 
+                    </div><!-- owl-item/portfolo item set -->
+
+                    </div><!-- /.port-holder -->
+                    </div><!-- /.section-holder -->
+
+                </div><!-- /.row -->
+
+        </div><!-- /.container -->
+    </section><!-- /.portfoilo -->
+
+    <section id="fun-fact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section-holder">
+                        <div class="text-center">
+                            <div class="icon-holder-center i-size-big">
+                                <i class="ion-ios-barcode-outline"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-center"> Fun Facts </h3>
+                        <ul class="counter">
+                            <li>
+                                <div class="counter-icon i-size-med">
+                                    <i class="ion-ios-analytics"></i>
+                                </div>
+                                <h1 class="counter-data">128</h1>
+                                <h4>Projects Done</h4>
+                            </li><!-- /.counter list -->
+                            <li>
+                                <div class="counter-icon i-size-med">
+                                    <i class="ion-ios-color-filter"></i>
+                                </div>
+                                <h1 class="counter-data">366</h1>
+                                <h4>Happy Clients</h4>
+                            </li><!-- /.counter list -->
+                            <li>
+                                <div class="counter-icon i-size-med">
+                                    <i class="ion-ios-clock"></i>
+                                </div>
+                                <h1 class="counter-data">6970</h1>
+                                <h4>Hours worked</h4>
+                            </li><!-- /.counter list -->
+                            <li>
+                                <div class="counter-icon i-size-med">
+                                    <i class="ion-trophy"></i>
+                                </div>
+                                <h1 class="counter-data">26</h1>
+                                <h4>Awards won</h4>
+                            </li><!-- /.counter list -->
+                        </ul><!-- /.counter -->
+                    </div><!-- /.section-holder -->
+                </div><!-- /.col-sm-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.fun-fact -->
+
+    <section id="contact">
+        <!-- Big Section Background Title -->
+        <h1 class="section-big-title til hidden-xs hidden-sm" data-in-effect="fadeInUp" data-out-effect="fadeInDown">contact</h1><!-- /. large title -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="section-holder texture">
+                        <!-- draw line art -->
+                        <div class="line-art-top">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- /.top line -->
+                        <div class="line-art-bottom">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- /.bottom line -->
+                        <div class="line-art-left">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- /.left line -->
+                        <div class="line-art-right">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <!-- /.right line -->
+                        
+                        <div class="icon-holder i-size-big">
+                            <i class="ion-ios-wineglass-outline"></i>
+                        </div>
+                        <h3> Lets Talk </h3>
+                        <h5>Location: 4826 Horner Ave, Toronto</h5>
+                        <h5>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="93f0fcfde7f2f0e7d3eafce6e1fef2faffbdf0fcfe">[email&#160;protected]</a></h5>
+                        <h5>Phone: 416-850-6996</h5>
+                        <a href="https://maps.google.com/maps?q=4826+Horner+Avet,+Toronto,+Canada&hl=en&t=v&hnear=4826+Horner+Avet,+Toronto,+Canada" class="mfp-iframe popup-it"><h4 class="map-open"> Open Map </h4></a>
+                        <div class="social-links">
+                            <a href="#url"> <i class="ion-social-twitter-outline i-size-small"></i> </a>
+                            <a href="#url"> <i class="ion-social-facebook-outline i-size-small"></i> </a>
+                            <a href="#url"> <i class="ion-social-dribbble-outline i-size-small"></i> </a>
+                            <a href="#url"> <i class="ion-social-github-outline i-size-small"></i> </a>
+                        </div><!-- /.social-links -->
+                    </div><!-- /.section-holder -->
+                </div><!-- /.col-sm-4 -->
+
+                <div class="col-sm-8">
+                    <div class="section-holder">
+                        <div class="icon-holder i-size-big">
+                            <i class="ion-ios-email-outline"></i>
+                        </div>
+                        <h3> Reach me </h3>
+                        <form class="form-horizontal" id="contactForm">
+                            <div class="form-group">
+
+                               <div class="col-sm-6">
+
+                                   <input type="text" class="form-control" id="inputName" placeholder="Your Name" required>
+                                    <span class="form-control-feedback">
+                                        <i class="ion-ios-grid-view-outline"></i>
+                                    </span>
+
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Your Email" required>
+
+                                    <span class="form-control-feedback">
+                                        <i class="ion-ios-grid-view-outline"></i>
+                                    </span>
+                                </div>
+                            </div><!-- /.form-group -->
+
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="inputPhone" placeholder="Phone (optional)">
+
+                                    <span class="form-control-feedback">
+                                        <i class="ion-ios-grid-view-outline"></i>
+                                    </span>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="inputSubject" placeholder="Subject" required>
+
+                                    <span class="form-control-feedback">
+                                        <i class="ion-ios-grid-view-outline"></i>
+                                    </span>
+                                </div>
+                            </div><!-- /.form-group -->
+                            <div class="form-group message">
+                                <div class="col-sm-12">
+                                    <textarea class="form-control" id="inputMessage" rows="4" placeholder="Message" required></textarea>
+
+                                    <span class="form-control-feedback">
+                                        <i class="ion-ios-grid-view-outline"></i>
+                                    </span>
+                                </div>
+                            </div><!-- /.form-group -->
+                            <div class="form-group">
+                                <div class="col-sm-8">
+                                    <button type="submit" id="form-submit" class="btn btn-cl">SEND MESSAGE</button>
+                                </div>
+                            </div><!-- /.form-group -->
+                            <div class="clearfix"></div>
+                        </form><!-- /.contact-form -->
+                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                    </div><!-- /.section-holder -->
+                </div><!-- /.col-sm-8 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.contact -->
+
+    <!-- js -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.lettering.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.textillate.js" type="text/javascript"></script>
+    <script src="assets/js/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.waypoints.min.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.counterup.js" type="text/javascript"></script>
+    <script src="assets/js/wow.min.js" type="text/javascript"></script>
+    <script src="assets/js/tweetie.min.js" type="text/javascript"></script>
+    <script src="assets/js/smoothscroll.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.nav.js" type="text/javascript"></script>
+    <script src="assets/js/validator.min.js" type="text/javascript"></script>
+    <script src="assets/js/script.js" type="text/javascript"></script>
+    <script src="assets/contact/contact.js"></script>
+
+    <!-- loader js -->
+     <script type="text/javascript">
+        $(window).load(function() {
+            $("#loader").delay(2000).fadeOut("slow");
+        });
+    </script>
+
+</body>
+
+</html>

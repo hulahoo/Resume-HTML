@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,300,300italic,700,500,500italic,700italic,400italic%7CLato:400,700,300">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.transitions.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel=" stylesheet">
+    <title>TOF</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header"> <!-- Header -->
+        <div class="custom__container"> <!-- Обвертка для внутренних блоков -->
+            <div class="box"> <!-- Отдельный блок для буквы Т чтобы наложить на него бордеры(только для блочных) -->
+                <h1> T </h1> <!-- Сама буква -->
+            </div>
+            <h1 class="main__title"> Tof Gadzhiev </h1> <!-- Отдельный класс для h1 для того чтобы накладывать на него свойства -->
+            <h4 class="tag__line"> Python | HTML </h4> <!-- Также Отдельный класс для h1 для того чтобы накладывать на него свойства -->
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="about"> <!-- Заглавный блок для content -->
+        <div class="custom__container-1"> <!-- Обвертка для внутренних блоков -->
+            <div class="block__places row"> <!--  Блок где будут хранится внутренние блоки -->
+                <div class="col-md-4 col-sm-12" data-aos="fade-left"> <!--  Блок где бует опсиание -->
+                    <div class="place__holder-1">
+                        <div class="image__holder">
+                            <img src="./images/avatar.jpeg" class="img__responsive img__circle" width="298" height="298">
+                        </div>
+                        <div class="seperator"> <!-- Для создания разделителя между текстом и картинкой --></div> 
+                        <h4> Name: Tof Gadzhiev </h4>
+                        <h4> Date of birth: 28-Aug-1990 </h4>
+                        <h4> Nationality: Azerbaijian </h4>
+                        <div class="social__links"> <!-- Для иконок -->
+                            <a href="#url">
+                                <i class="ion-social-dribble-outline i-size-small"></i>
+                            </a>
+                            
+                            <a href="#url">
+                                <i class="ionicon-var-social-android-outline i-size-small"></i>
+                            </a>
+
+                            <a href="#url">
+                                <i class="ionicon-var-social-twitter-outline i-size-small"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-12" data-aos="fade-right"> <!--  Блок где будут текста -->
+                    <div class="text__holder">
+                        <div class="icon__holder i-size-big"> <!-- Иконка -->
+                            <i class="ion-ios-compose-outline"></i>
+                        </div>
+                        <h3 class="text__title"> <!-- Текст -->
+                            About Me
+                        </h3>
+                        <p>
+                            Beast. Meat set greater she'd creeping from were under bearing won't wherein it open. Light. 
+                            From midst all fill saying day Very void land their fly. <br>
+
+                            Heaven green without whose replenish seasons there brought, over own sixth in Beginning. <br> <br>
+                            All behold. Our every fruitful so.  
+
+                        </p>
+                        <div class="icon__holder i-size-small">
+                            <i class="ion-ios-baseball-outline"></i>
+                        </div> <!-- Иконка шарика -->
+                        <h3 class="hobbies__title">Hobbies</h3> <!-- Hobbies text -->
+                        <p> bicycling | gaming | hiking | photography </p> <!-- Hobbies -->
+                        <div class="icon__holder i-size-small"> <!-- Иконка жс -->
+                            <i class="ion-social-twitter-outline"></i>
+                        </div>
+                        <h4 class="hobbies__title">Latest Tweet</h4> <!-- Text -->
+                        <ul class="tweet"> <!-- text latest tweet -->
+                            <li>
+                                <strong class="date__">8/Apr/2021</strong>
+                                - Calling all video editors and creators: we've got lower thirds templates to make your videos pop! Whether you need… 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="education__skill" data-aos="fade-right">  <!-- Блок -->
+        <div class="custom__container-2">  <!-- Внутренний контайнер -->
+            <div class="row px-0 mx-0">  <!-- Класс бутсрапа для деления на линии -->
+                <div class="col-sm-4">  <!-- Блок который занимает 4 коллоны -->
+                    <div class="place__holder-2">  <!-- Контент для первого блока -->
+                        <div class="icon__holder i-size-big"> <!-- Иконка звезды -->
+                            <i class="ion-ios-star-outline"></i>
+                        </div>
+                        <h3>Skills</h3> <!-- Надпись -->
+
+                        <div class="skill-holder owl-carousel owl-theme" style="opacity: 1; display: block;"> <!-- главный блок для карусели -->
+                            <div class="owl-wrapper-outer"> <!-- внешний контейнер -->
+                                <div class="owl-wrapper" style="width: 1788px; left: 0px; display: block;"> <!-- внутрений контейнер -->
+
+                                    <!-- --------------------- Первая карусель ------------------- -->
+                                    <div class="owl-item active" style="width: 298px;"> <!-- Блока для первой карусели -->
+                                        <div class="skill-area"> <!-- Блок для расположения скиллов -->
+                                            <h4 class="skill-title">Professional</h4> <!-- Надпись для первой карусели -->
+
+                                            <!-- Первый скилл первой карусели -->
+                                            <div class="skillbar clearfix" data-perceent="90%"> <!-- блок для первого скиллбара -->
+                                                <div class="skillbar-title"> <!-- Надпись для первого скиллбара -->
+                                                    <span>CSS</span>
+                                                </div>
+                                                <div class="skillbar-bg"></div> <!-- блок для оставшейся незаполненной части процентной линии -->
+                                                <div class="skillbar-bar to-animate" style="width: 90%;"></div>  <!-- блок для заполненной части процентами -->
+                                                <div class="skill-bar-percent">90%</div> <!-- Надпись в процентах скилла-->
+                                            </div>
+                                            
+                                            <!-- Второй скилл первой карусели -->
+                                            <div class="skillbar clearfix" data-perceent="95%"> <!-- блок для второго скиллбара -->
+                                                <div class="skillbar-title"> <!-- Надпись для второго скиллбара -->
+                                                    <span>HTML</span>
+                                                </div>
+                                                <div class="skillbar-bg"></div> <!-- блок для оставшейся незаполненной части процентной линии -->
+                                                <div class="skillbar-bar to-animate" style="width: 95%;"></div>  <!-- блок для заполненной части процентами -->
+                                                <div class="skill-bar-percent">95%</div> <!-- Надпись в процентах скилла-->
+                                            </div>
+
+                                            <!-- Третий скилл первой карусели -->
+                                            <div class="skillbar clearfix" data-perceent="10%"> <!-- блок для третьего скиллбара -->
+                                                <div class="skillbar-title"> <!-- Надпись для третьего скиллбара -->
+                                                    <span>jQuery</span>
+                                                </div>
+                                                <div class="skillbar-bg"></div> <!-- блок для оставшейся незаполненной части процентной линии -->
+                                                <div class="skillbar-bar to-animate" style="width: 10%;"></div>  <!-- блок для заполненной части процентами -->
+                                                <div class="skill-bar-percent">10%</div> <!-- Надпись в процентах скилла-->
+                                            </div>
+                                            
+                                            <!-- Четвертый скилл первой карусели -->
+                                            <div class="skillbar clearfix" data-perceent="30%"> <!-- блок для третьего скиллбара -->
+                                                <div class="skillbar-title"> <!-- Надпись для четвертого скиллбара -->
+                                                    <span>Bootstrap</span>
+                                                </div>
+                                                <div class="skillbar-bg"></div> <!-- блок для оставшейся незаполненной части процентной линии -->
+                                                <div class="skillbar-bar to-animate" style="width: 30%;"></div>  <!-- блок для заполненной части процентами -->
+                                                <div class="skill-bar-percent">30%</div> <!-- Надпись в процентах скилла-->
+                                            </div>  
+                                                                    
+                                        </div>
+                                    </div>
+                                                      
+                                </div>
+                            </div>
+                            <div class="owl-controls clickable">
+                                <div class="owl-buttons">
+                                    <div class="owl-prev">
+                                        <span class="ion-ios-arrow-left"></span>
+                                    </div>
+                                    <div class="owl-next">
+                                        <span class="ion-ios-arrow-right"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            
+                <!-- Second block skills -->
+                <div class="col-sm-8 col-md-8 px-0 mx-0">
+                    <div class="section__holder">
+                        <div class="icon__holder i-size-big"> <!-- блок Иконки лампочки -->
+                            <i class="ion-ios-lightbulb-outline"></i> <!-- сама иконка лампочки -->
+                        </div>
+                    <h3>Education</h3> <!-- text -->
+                    <div class="education__map"> <!-- block for education time -->
+                        
+                        <!-- first block  -->
+                        <div class="col-sm-12"> <!-- first block for one of education list -->
+                            <div class="education__item"> <!-- first education map -->
+                                <div class="education__year"> <!-- first education year -->
+                                    2013-Present
+                                </div>
+                                <div class="icon-holder-time wow fadeIn" style="visibility: visible; animation-name: fadeIn;"><!-- circle icon -->
+                                    <i class="ion-ios-circle-outline"></i>
+                                </div>
+                            <h4 class="education__title">
+
+                                ILD University of Technology
+                                    
+                            </h4>
+                            <h5 class="education__semitag"> Major in Computer Science </h5>
+                            <p>
+                                Given two spirit very unto firmament. Fourth and she'd their fruit together.
+                            </p>
+
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- second block  -->
+                        <div class="col-sm-12">
+                            <div class="education__item"> <!-- second education map -->
+                                <div class="education__year"> <!-- first education year -->
+                                    2009-2011
+                                </div>
+                                <div class="icon-holder-time wow fadeIn" style="visibility: visible; animation-name: fadeIn;"><!-- circle icon -->
+                                    <i class="ion-ios-circle-outline"></i>
+                                </div>
+                                <h4 class="education__title">
+                                    Newton College of Science & Arts  
+                                </h4>
+                                <h5 class="education__semitag">  Standard Applied Science  </h5>
+                                <p>
+                                    Given two spirit very unto firmament. Fourth and she'd their fruit together.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- third block  -->
+                        <div class="col-sm-12">
+                            <div class="education__item"> <!-- second education map -->
+                                <div class="education__year"> <!-- first education year -->
+                                    2011-2013
+                                </div>
+                                <div class="icon-holder-time wow fadeIn" style="visibility: visible; animation-name: fadeIn;"><!-- circle icon -->
+                                    <i class="ion-ios-circle-outline"></i>
+                                </div>
+                                <h4 class="education__title">
+                                    
+                                    Twinkle Higher Secondary School
+                                      
+                                </h4>
+                                <h5 class="education__semitag">   Standard Secondary Science   </h5>
+                                <p>
+                                    Given two spirit very unto firmament. Fourth and she'd their fruit together.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./js/aos.js"></script>
+<script src="./js/owl.carousel.min.js"></script>
+</body>
+</html>
